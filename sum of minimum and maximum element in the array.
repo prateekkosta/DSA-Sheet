@@ -1,0 +1,8 @@
+class Solution:
+    def findSum(self,A,N): 
+        #code here
+        m= max(A)
+        n= min(A)
+        S= m+n
+        return S
+
