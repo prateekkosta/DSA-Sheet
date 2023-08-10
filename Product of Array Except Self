@@ -1,0 +1,12 @@
+def productExceptSelf(self, nums: List[int]) -> List[int]:
+        answer= []
+        prefix= 1
+        for i in nums:
+            prefix*= i
+            answer.append(prefix)
+        postfix= 1
+        for i in range(len(nums)-1,0,-1):
+            answer[i]=postfix * answer[i-1]
+            postfix*=nums[i]
+        answer[0]= postfix
+        return answer
