@@ -1,0 +1,13 @@
+n= int(input())
+string= str(n)
+number_list= []
+val1=0
+val2=0
+for i in string:
+    number_list.append(int(i))
+for x in  number_list:
+    if x%2==0:
+        val1= val1 + x
+    elif x%2 !=0:
+        val2= val2 + x
+print(val1," ", val2)
