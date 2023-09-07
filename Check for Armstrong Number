@@ -1,0 +1,15 @@
+n =  int(input())
+k=n
+l= []
+while n>0:
+    remen=n%10
+    l.append(remen)
+    n=n//10
+m= len(l)
+sum= 0
+for i in range(m):
+    sum=sum+l[i]**m
+if sum==k:
+    print('true')
+else:
+    print('false')
