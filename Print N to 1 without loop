@@ -1,0 +1,13 @@
+from typing import List
+
+def printNos(x: int) -> List[int]:
+    # Write your code here
+    if x==0:
+        return []
+    else:
+        print(x, end=" ")
+        x-=1
+        ans= printNos(x)
+        
+    return ans
+    pass
