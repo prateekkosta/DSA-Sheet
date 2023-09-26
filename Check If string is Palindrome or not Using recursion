@@ -1,0 +1,16 @@
+def isPalindrome(string: str) -> bool:
+    def palindrome(string,s,a):
+        if s==a:
+            return True
+        if string[s] != string[a]:
+            return False
+        
+        if s<a+1:
+            return palindrome(string,s+1,a-1)
+        return True
+    
+    n=len(string)
+    if n==0 or n==1:
+        return True
+    return palindrome(string,0,n-1)
+    pass
