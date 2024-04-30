@@ -1,0 +1,16 @@
+class Solution:
+    # @param A : tuple of integers
+    # @return a list of integers
+    def repeatedNumber(self, A):
+        y= set()
+        repeat= 0
+        for i in A:
+            if i in y:
+                repeat= i
+            y.add(i)
+        n= len(A)
+        sum_A= n*(n+1)//2
+        miss_num= sum_A - sum(y)
+        
+        return repeat, miss_num
+                
